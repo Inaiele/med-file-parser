@@ -1,0 +1,31 @@
+[project]
+    name = 'med-file-parser'
+    version = '0.1.0'
+    description = 'Medical files parser'
+    readme = 'README.md'
+    requires-python = '>= 3.8'
+    authors = [
+        {name = 'K. Kosyrev', email = 'k.kosyrev@gmail.com'},
+    ]
+    # urls = {homepage = ''}
+
+    dependencies = [
+        'openpyxl==3.1.5',
+        'click'
+    ]
+
+[project.scripts]
+    parser = 'parser_cli:cli'
+
+[build-system]
+    requires = [
+        'setuptools >= 61.0.0',
+    ]
+    build-backend = 'setuptools.build_meta'
+
+
+[tool.setuptools]
+    py-modules = []
+
+[tool.setuptools.packages.find]
+    exclude = ['tests']
